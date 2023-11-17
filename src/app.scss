@@ -1,6 +1,6 @@
 html{
-   scroll-snap-type: y mandatory;
-   scroll-behavior:smooth;
+   scroll-snap-type: y mandatory !important;
+   scroll-behavior:smooth !important;
 }
 *{
     padding:0;
@@ -17,7 +17,7 @@ body{
     color:lightgray;
 }
 section{
-    height:100vh;
-   scroll-snap-align:center;
+    height:100vh !important;
+   scroll-snap-align:center !important;
 
 }
