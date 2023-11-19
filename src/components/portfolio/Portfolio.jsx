@@ -1,35 +1,41 @@
 import "./portfolio.scss"
 import {useRef} from "react";
 import {motion,useScroll,useSpring,useTransform} from "framer-motion";
+
 const items=[{
    id:1,
    title:"Homeease",
    img:"/Homeease.png",
+   link:"https://github.com/Ritwiza5/Homeease",
    desc:"Homeease is a complete webapp used for online shopping.From ordering products to make payments online,it makes every thing available at just one click.Super easy and user-friendly."
 },
 {
    id:2,
    title:"Let's connect",
-   img:"",
-   desc:"Homeease is a complete webapp used for online shopping.From ordering products to make payments online,it makes every thing available at just one click.Super easy and user-friendly."
+   img:"/connect.png",
+   link:"https://github.com/Ritwiza5/Lets-Connect",
+   desc:" Designed a chat app with the help of Mern stack.Used Chakra UI and socket.io for real time communication."
 },
 {
    id:3,
    title:"Portfolio",
-   img:"",
-   desc:"Homeease is a complete webapp used for online shopping.From ordering products to make payments online,it makes every thing available at just one click.Super easy and user-friendly."
+   img:"/portfolio.png",
+   link:"https://github.com/Ritwiza5/Myportfolio",
+   desc:"Personal portfolio made using React,Framer Motion and SCSS.Completely responsive and deployement is also done."
 },
 {
    id:4,
    title:"Spotify clone",
    img:"/Spotify.png",
-   desc:"Homeease is a complete webapp used for online shopping.From ordering products to make payments online,it makes every thing available at just one click.Super easy and user-friendly."
+   link:"https://github.com/Ritwiza5/spotify-clone",
+   desc:"A Spotify clone using pure html,css and javascript.A music player made with Javascript and for styling HTML and CSS to listen to your favourites offline."
 },
 {
    id:5,
    title:"WildLife Treasure",
    img:"/Wildlife.png",
-   desc:"Homeease is a complete webapp used for online shopping.From ordering products to make payments online,it makes every thing available at just one click.Super easy and user-friendly."
+   link:"https://github.com/Ritwiza5/Wildlife-Treasure",
+   desc:"A website made using HTML, CSS and Javascript to create awareness for wildlife and its conservation."
 }];
 
 const Single=({item})=>{
@@ -49,7 +55,7 @@ const Single=({item})=>{
             <motion.div className="textContainer" style={{y}}>
             <h2 >{item.title}</h2>
             <p>{item.desc}</p>
-            <button>See Project</button>
+           <a href={item.link}><button>See Project</button></a> 
             </motion.div>
            </div>
            </div>                                                                               
