@@ -112,17 +112,17 @@ const items=[{
     color:"rgba(170, 152, 169, 1)",
 },
 {
-    id:18,
+    id:19,
     img:"/render.png",
     color:"rgba(125, 249, 255, 1)",
 },
 {
-    id:18,
+    id:20,
     img:"/git.png",
     color:"rgba(255, 95, 21, 1)",
 },
 {
-    id:18,
+    id:21,
     img:"/github.png",
     color:"rgba(250, 249, 246, 1)",
 },]

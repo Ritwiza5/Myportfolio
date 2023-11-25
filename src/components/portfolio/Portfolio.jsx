@@ -44,6 +44,15 @@ const Single=({item})=>{
 
     const y=useTransform(scrollYProgress,[0,1],[-300,300]);
 
+    const handleClick = () => {
+      console.log("hello");
+      // Add any specific behavior you want on button click
+      window.location.href = item.link; // Redirect to the provided link
+    };
+    const handleTouchStart = () => {
+      // Simulate a click on touch devices
+      handleClick();
+    };
     return(
         <section >
            <div className="container">
@@ -55,7 +64,9 @@ const Single=({item})=>{
             <motion.div className="textContainer" style={{y}}>
             <h2 >{item.title}</h2>
             <p>{item.desc}</p>
-           <a href={item.link}><button>See Project</button></a> 
+            <div className="buttonContainer" onClick={handleClick}>
+              See Project
+            </div>
             </motion.div>
            </div>
            </div>                                                                               
@@ -74,7 +85,8 @@ const Portfolio = () => {
         <h1>Featured Works</h1>
         <motion.div style={{scaleX:scaleX}} className="progressBar"></motion.div>
     </div>
-    {items.map(item=>(<Single item={item} key={item.id}/>))}</div>
+    {items.map(item=>(<Single item={item} key={item.id}/>))}
+            </div>
   )
 }
 

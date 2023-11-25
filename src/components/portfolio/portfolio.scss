@@ -12,6 +12,7 @@
         @include mobile{
             padding-top:calc(100vh - 100px) !important;
             font-size: 24px;
+            margin-bottom:10px;
         }
        
     .progressBar{
@@ -68,11 +69,13 @@
         gap:30px;
 
         @include mobile{
-            transform:none !important;
+           
+            transform: none !important;
             padding:10px;
             align-items:center;
             text-align:center;
-         }
+            }
+         
 
         h2{
             font-size: 72px;
@@ -89,15 +92,34 @@
               font-size: 16px;
               }
         }
-        button{
+        .buttonContainer{
             background-color: orange;
             border: none;
             border-radius: 10px;
             padding:10px;
             width:200px;
             cursor:pointer;
+
+            @include mobile {
+               
+                  background-color: orange;
+                  border: none;
+                  border-radius: 10px;
+                  padding: 10px;
+                  width: 200px;
+                  cursor: pointer;
+                  text-align: center;
+                }
         }
+    
+        
+        
     }
 }
 }
 }
+@media only screen and (max-width: 768px) {
+    .portfolio .container .wrapper .textContainer {
+      transform: translate3d(0, 0, 0) !important; /* Added transform property for mobile devices */
+    }
+  }
